@@ -3,7 +3,8 @@ class Student
 
   def self.new_from_db(row)
     # create a new Student object given a row from the database
-
+    sql = 
+    DB[:conn].execute(sql)
   end
 
   def self.all
@@ -52,3 +53,4 @@ class Student
   end
 end
       
+  
