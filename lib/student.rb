@@ -22,7 +22,7 @@ class Student
       WHERE
         ?
     SQL
-    DB.execute(sql, name)
+    DB[:conn].execute(sql, name)
   end
 
   def save
