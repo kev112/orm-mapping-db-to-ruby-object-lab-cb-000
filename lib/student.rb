@@ -26,7 +26,8 @@ class Student
       WHERE
         ?
     SQL
-    DB[:conn].execute(sql, name).flatten.first
+    row = DB[:conn].execute(sql, name).first
+    student = self.new(row)
   end
 
   def save
