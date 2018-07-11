@@ -26,8 +26,12 @@ class Student
       WHERE
         ?
     SQL
-    row = DB[:conn].execute(sql, name).flatten
-    student = self.new_from_db(row)
+    # row = DB[:conn].execute(sql, name).flatten
+    # student = self.new_from_db(row)
+    
+    DB[:conn].execute(sql,name).map do |row|
+      self.new_from_db(row)
+    end.first
   end
 
   def save
@@ -56,4 +60,4 @@ class Student
     DB[:conn].execute(sql)
   end
 end
-    
+      
