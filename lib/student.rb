@@ -20,7 +20,7 @@ class Student
     #   self.new_from_db(row)
     # end
     # 
-    DB[:conn].execute(sql).count
+    DB[:conn].execute(sql)
   end
 
   def self.all
