@@ -10,6 +10,10 @@ class Student
     student
   end
 
+  def self.count_all_students_in_grade_9
+    
+  end
+
   def self.all
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
