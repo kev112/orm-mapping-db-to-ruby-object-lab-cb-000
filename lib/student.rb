@@ -25,6 +25,8 @@ class Student
         students
       WHERE
         ?
+      LIMIT
+        1
     SQL
     # row = DB[:conn].execute(sql, name).flatten
     # student = self.new_from_db(row)
